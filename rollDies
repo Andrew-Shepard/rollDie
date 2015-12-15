@@ -1,0 +1,22 @@
+import java.util.*;
+public class rollDies {
+	public static void main(String[] args) {
+		Scanner reader = new Scanner(System.in);
+		int sum = 0;
+		int num = 0;
+		System.out.println("Enter how many times you would like to roll the die: ");
+		int amount = reader.nextInt();
+		int [] die = new int [amount];
+		for(int i=0; i<amount; i++)
+		{
+		die[i] = (int)(Math.random() * (6 - 1) + 1);
+		}
+		while(num != die.length)
+		{
+			sum += die[num];
+			num++;
+		}
+		System.out.println("You rolled a total of: "+sum);
+	}
+	
+}
